@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="1138.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="1138.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane layoutX="14.0" layoutY="70.0" prefHeight="635.0" prefWidth="541.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Editor">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane>
+                           <content>
+                              <TextArea fx:id="editor" prefHeight="596.0" prefWidth="541.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Assembler">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="assembleData" prefHeight="352.0" prefWidth="541.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Pane layoutX="569.0" layoutY="70.0" maxHeight="635.0" prefHeight="635.0">
+         <children>
+            <TableView prefHeight="200.0" prefWidth="558.0">
+              <columns>
+                <TableColumn prefWidth="70.0" text="Register" />
+                <TableColumn prefWidth="45.0" text="Data" />
+                  <TableColumn maxWidth="40.0" minWidth="25.0" prefWidth="33.0" resizable="false" text="15" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="30.0" resizable="false" text="14" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="30.0" resizable="false" text="13" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="30.0" resizable="false" text="12" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="30.0" resizable="false" text="11" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="30.0" resizable="false" text="10" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="25.0" resizable="false" text="9" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="25.0" resizable="false" text="8" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="25.0" resizable="false" text="7" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="25.0" resizable="false" text="6" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="25.0" resizable="false" text="5" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="25.0" resizable="false" text="4" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="25.0" resizable="false" text="3" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="25.0" resizable="false" text="2" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="25.0" resizable="false" text="1" />
+                  <TableColumn maxWidth="30.0" minWidth="25.0" prefWidth="25.0" resizable="false" text="0" />
+              </columns>
+               <effect>
+                  <Blend />
+               </effect>
+            </TableView>
+            <TableView layoutY="312.0" prefHeight="143.0" prefWidth="558.0">
+              <columns>
+                <TableColumn prefWidth="328.0" text="Register Type" />
+                <TableColumn minWidth="0.0" prefWidth="229.0" text="Value" />
+              </columns>
+            </TableView>
+            <TitledPane layoutY="214.0" text="Flag Register">
+               <content>
+                  <TableView prefHeight="64.0" prefWidth="567.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="Data" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="-" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="-" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="-" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="-" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="O" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="D" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="I" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="T" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="S" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="Z" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="-" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="A" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="-" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="P" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="-" />
+                        <TableColumn maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="CY" />
+                    </columns>
+                  </TableView>
+               </content>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TitledPane>
+         </children>
+      </Pane>
+      <Button fx:id="assembleMe" layoutX="165.0" layoutY="727.0" mnemonicParsing="false" text="Assemble" />
+   </children>
+</AnchorPane>
