@@ -9,6 +9,23 @@ public class Registers  {
     private String value;
     private byte BITS[]=new byte[16];
 
+    public Registers(String REGNAME, short REGCODE, String value, byte[] BITS) {
+        this.REGNAME = REGNAME;
+        this.REGCODE = REGCODE;
+        this.value = value;
+        this.BITS = BITS;
+    }
+
+    public Registers() {
+    }
+
+    public Registers(String REGNAME, short REGCODE, String value) {
+
+        this.REGNAME = REGNAME;
+        this.REGCODE = REGCODE;
+        this.value = value;
+    }
+
     public String getREGNAME() {
         return REGNAME;
     }
